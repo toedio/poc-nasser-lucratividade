@@ -1,0 +1,15 @@
+{
+  "name": "poc-nasser-lucratividade",
+  "version": "0.1.0",
+  "private": true,
+  "description": "POC do módulo de lucratividade (rentabilidade por cliente/projeto/mês) — Nasser Advogados. Dados fictícios.",
+  "type": "module",
+  "scripts": {
+    "start": "node scripts/serve.mjs",
+    "test": "node --test",
+    "relatorio": "node scripts/relatorio.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
