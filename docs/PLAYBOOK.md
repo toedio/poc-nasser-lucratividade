@@ -74,7 +74,8 @@ custo efetivo/h = custo direto/h + rateio/h
 - `src/engine.js` – regras puras (reutilizáveis no backend futuro) · `src/seed.js` – gerador **determinístico** de dados fictícios · `src/store.js` – persistência · `src/app.js` – UI · `tests/engine.test.js` – `npm test`.
 - `npm start` → http://localhost:5173 · `npm run relatorio` → resumo dos dados demo no terminal.
 - Telas: Painel (drill-down cliente → projeto → mês → serviços prestados + composição do custo, coluna Área, tooltips por coluna, projetos com prejuízo, escritório mês a mês) · Análise (quebras, ordenação, CSV) · Custo hora · Relatório de horas (espelha o relatório ao cliente + visão interna) · Cadastros (advogados, custos, despesas, áreas, clientes, projetos, lançamentos, faturas com divisão) · Configurações **oculta**, em `#/config` (rateio, base de horas, import/export JSON, import CSV de lançamentos).
-- **Publicação:** qualquer host estático (GitHub Pages, Netlify, Vercel, S3) servindo a raiz. Não abre via `file://` (ES modules) — precisa de HTTP.
+- **Publicado em:** https://toedio.github.io/poc-nasser-lucratividade/ (GitHub Pages, branch `main`, raiz). Repo: https://github.com/toedio/poc-nasser-lucratividade (**público** — o plano gratuito não permite Pages em repo privado; decisão do Victor em 2026-11-03). Todo push na `main` republica em ~1 min.
+- **Publicação (alternativas):** qualquer host estático (GitHub Pages, Netlify, Vercel, S3) servindo a raiz. Não abre via `file://` (ES modules) — precisa de HTTP.
 
 ### Cenários embutidos nos dados fictícios (para a demo)
 - *Grupo Atlântico*: **fatura única** para 3 projetos; jan–mai com divisão informada, jun–set automática; desconto de 10% nas horas.
@@ -105,3 +106,4 @@ custo efetivo/h = custo direto/h + rateio/h
 
 - **2026-11-03** – Reunião de entendimento (transcrição Gemini). POC v0.1 criada: motor + testes (12), dados fictícios, 6 telas, identidade visual da Nasser.
 - **2026-11-03 (v0.2)** – Correções do Victor: serviços prestados e composição do custo no mês; coluna Área; tooltips nas colunas; faturado = recebido (pagamentos removidos); fatura + divisão por projeto num cadastro só; Configurações oculta; tooltips nas outras tabelas; gráfico mensal empilhado por área. Dados demo agora na versão 2: um `localStorage` antigo é descartado. 13 testes.
+- **2026-11-03** – Código publicado no GitHub (`toedio/poc-nasser-lucratividade`, tornado público) e hospedado no GitHub Pages.
