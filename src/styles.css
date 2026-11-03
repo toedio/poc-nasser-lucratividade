@@ -8,59 +8,28 @@
   --nasser-bege: #eae2d9;
   --nasser-areia: #cac2b8;
   --nasser-taupe: #9f9388;
-  --bg: #f5f4f1;
+  /* tema único claro, inspirado nas seções do site (fundo branco quente, títulos leves em caixa alta) */
+  --bg: #fafaf9;
   --surface: #ffffff;
-  --surface-2: #f3eee8;
-  --text: #2b2b2b;
-  --muted: #6b635b;
-  --border: #e2dbd2;
+  --surface-2: #f6f3ef;
+  --text: #4a4a4a;
+  --muted: #7d766f;
+  --border: #ece7e1;
   --accent: var(--nasser-vermelho);
   --accent-text: #ffffff;
-  --topo-bg: var(--nasser-vermelho);
-  --topo-text: #ffffff;
+  --topo-bg: #ffffff;
+  --topo-text: var(--nasser-grafite);
   --pos: #2f6b4f;
   --neg: #b0102b;
   --warn: #8a5a00;
   --bar-pos: #5f8f75;
   --bar-neg: #c41230;
-  --shadow: 0 1px 2px rgba(74, 74, 74, 0.08);
+  --shadow: 0 1px 2px rgba(74, 74, 74, 0.06);
   /* séries do gráfico — paleta categórica validada (dataviz) contra superfície #fff */
   --serie-1: #2a78d6; --serie-2: #eb6834; --serie-3: #1baf7a; --serie-4: #eda100;
   --serie-5: #e87ba4; --serie-6: #008300; --serie-7: #6250d6; --serie-outros: #9f9388;
-  --graf-linha: #2b2b2b; --graf-grade: #ece6df;
+  --graf-linha: #4a4a4a; --graf-grade: #efeae4;
   color-scheme: light;
-}
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme='light']) {
-    --bg: #1c1a19;
-    --surface: #252220;
-    --surface-2: #2f2b28;
-    --text: #efe9e2;
-    --muted: #b3a89d;
-    --border: #3d3733;
-    --accent: #e8506a;
-    --accent-text: #1c1a19;
-    --topo-bg: var(--nasser-vinho);
-    --topo-text: #ffffff;
-    --pos: #7fc39d;
-    --neg: #f27b8e;
-    --warn: #e2b45c;
-    --bar-pos: #6fae8b;
-    --bar-neg: #e8506a;
-    --shadow: none;
-    --serie-1: #3987e5; --serie-2: #d95926; --serie-3: #199e70; --serie-4: #c98500;
-    --serie-5: #d55181; --serie-6: #008300; --serie-7: #9085e9; --serie-outros: #8a8075;
-    --graf-linha: #efe9e2; --graf-grade: #35302c;
-    color-scheme: dark;
-  }
-}
-:root[data-theme='dark'] {
-  --bg: #1c1a19; --surface: #252220; --surface-2: #2f2b28; --text: #efe9e2; --muted: #b3a89d; --border: #3d3733;
-  --accent: #e8506a; --accent-text: #1c1a19; --topo-bg: var(--nasser-vinho); --topo-text: #fff;
-  --pos: #7fc39d; --neg: #f27b8e; --warn: #e2b45c; --bar-pos: #6fae8b; --bar-neg: #e8506a; --shadow: none; color-scheme: dark;
-  --serie-1: #3987e5; --serie-2: #d95926; --serie-3: #199e70; --serie-4: #c98500;
-  --serie-5: #d55181; --serie-6: #008300; --serie-7: #9085e9; --serie-outros: #8a8075;
-  --graf-linha: #efe9e2; --graf-grade: #35302c;
 }
 
 * { box-sizing: border-box; }
@@ -70,29 +39,32 @@ body {
   color: var(--text);
   font: 14px/1.5 'Montserrat', 'Proxima Nova Alt', 'Proxima Nova', system-ui, -apple-system, 'Segoe UI', sans-serif;
 }
-h1, h2, h3 { color: var(--text); font-weight: 600; letter-spacing: -0.01em; }
-h1 { border-left: 4px solid var(--accent); padding-left: 10px; }
+body { background-image: linear-gradient(135deg, transparent 0 62%, rgba(234, 226, 217, 0.35) 62% 78%, transparent 78%); background-attachment: fixed; }
+h1, h2, h3 { color: var(--text); font-weight: 400; letter-spacing: 0.01em; }
+h1 { color: var(--accent); text-transform: uppercase; font-weight: 300; letter-spacing: 0.02em; }
+h2 { text-transform: uppercase; font-weight: 400; }
+b, strong { color: var(--text); }
 a { color: var(--accent); }
-h1 { font-size: 1.35rem; margin: 0 0 4px; }
-h2 { font-size: 1.05rem; margin: 24px 0 8px; }
+h1 { font-size: 1.9rem; margin: 4px 0 14px; }
+h2 { font-size: 1.1rem; margin: 28px 0 10px; }
 p.sub { color: var(--muted); margin: 0 0 16px; max-width: 80ch; }
 
 .topo {
   position: sticky; top: 0; z-index: 5;
   display: flex; flex-wrap: wrap; align-items: center; gap: 8px 24px;
-  padding: 12px 16px; background: var(--topo-bg); color: var(--topo-text);
+  padding: 12px 16px; background: var(--topo-bg); color: var(--topo-text); border-bottom: 1px solid var(--border); box-shadow: 0 1px 3px rgba(74, 74, 74, 0.05);
 }
 .marca { display: flex; align-items: center; gap: 14px; }
 .marca img { height: 30px; width: auto; display: block; }
-.marca .modulo { font-weight: 500; font-size: 13px; letter-spacing: 0.04em; text-transform: uppercase; border-left: 1px solid rgba(255, 255, 255, 0.45); padding-left: 14px; }
-.selo { white-space: nowrap; font-size: 11px; padding: 2px 8px; border-radius: 99px; background: rgba(255, 255, 255, 0.16); color: #fff; }
+.marca .modulo { font-weight: 400; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; border-left: 1px solid var(--border); padding-left: 14px; color: var(--nasser-grafite); }
+.selo { white-space: nowrap; font-size: 11px; padding: 2px 8px; border-radius: 99px; background: var(--surface-2); color: var(--muted); }
 nav { display: flex; flex-wrap: wrap; gap: 2px; }
 nav a {
-  padding: 6px 10px; border-radius: 4px; text-decoration: none; color: rgba(255, 255, 255, 0.82); font-weight: 500;
+  padding: 6px 10px; text-decoration: none; color: var(--nasser-grafite); font-weight: 400;
+  text-transform: uppercase; font-size: 12.5px; letter-spacing: 0.05em; border-bottom: 2px solid transparent;
 }
-nav a:hover { background: rgba(255, 255, 255, 0.12); color: #fff; }
-nav a[aria-current='page'] { background: #fff; color: var(--nasser-vermelho); }
-nav a:focus-visible { outline-color: #fff; }
+nav a:hover { color: var(--accent); }
+nav a[aria-current='page'] { color: var(--accent); border-bottom-color: var(--accent); }
 
 main { padding: 20px 16px 48px; max-width: 1480px; margin: 0 auto; outline: none; }
 

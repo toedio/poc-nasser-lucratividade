@@ -35,8 +35,9 @@
 | 2026-11-03 | Painel sem texto introdutório. Tooltips também em “Projetos com margem negativa” e “Escritório mês a mês”. |
 | 2026-11-03 | Escritório mês a mês ganhou **gráfico de barras empilhadas**: faturado por mês, uma subsérie por **área** (padrão: área do projeto; alternável para área do advogado = participação por horas), mais uma **linha de custo total** do escritório (oculta com filtro de área). Tooltip por mês, teclado (setas), “Ver dados do gráfico”. |
 | 2026-11-03 | Cores do gráfico = paleta categórica de referência da skill dataviz (validada nos dois temas contra as superfícies do app). As cores da marca **reprovam** como série (grafite/bege leem como cinza; vermelho × grafite indistinguíveis para daltônicos). Cor segue a área (ordem do cadastro), nunca o ranking. Máx. 7 áreas coloridas; além disso, “Outras áreas” em bege neutro. |
+| 2026-11-03 | **Tema único claro**, sem modo escuro, inspirado nas seções do site: fundo branco quente, títulos em caixa alta com peso leve (H1 em vermelho), texto grafite `#4A4A4A`, cabeçalho branco com logo vermelho (`assets/logo-nasser-vermelho.svg`) e menu em caixa alta com sublinhado vermelho. |
 | 2026-11-03 | **Configurações oculta** do menu para a publicação: acessível só pela URL `#/config` (rateio, base de horas, import/export JSON, import CSV, restaurar demo). |
-| 2026-11-03 | Identidade visual da Nasser: vermelho `#C41230`, vinho `#670D12`, grafite `#4A4A4A`, bege `#EAE2D9`/`#CAC2B8`/`#9F9388`, fundo `#F5F4F1`. Fonte do site: Proxima Nova (licenciada) → na POC usamos **Montserrat**. Logo: `assets/logo-nasser.svg` (branco, para fundo vermelho). |
+| 2026-11-03 | Identidade visual da Nasser: vermelho `#C41230`, vinho `#670D12`, grafite `#4A4A4A`, bege `#EAE2D9`/`#CAC2B8`/`#9F9388`, fundo `#F5F4F1`. Fonte do site: Proxima Nova (licenciada) → na POC usamos **Montserrat**. Logo: `assets/logo-nasser-vermelho.svg` (usado no cabeçalho branco); `assets/logo-nasser.svg` é a versão branca. |
 
 ## 4. Modelo de cálculo (implementado em `src/engine.js`)
 
